@@ -1,5 +1,7 @@
 package ApiGateway.sasteria_microservice.sales.controllers;
 
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.core.ParameterizedTypeReference;
@@ -13,14 +15,13 @@ import org.springframework.web.reactive.function.client.WebClient;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/graphql/raw-material")
-public class RawMaterialController {
-
+@RequestMapping("/graphql/customer")
+public class CustomerController {
 
     private final DiscoveryClient discoveryClient;
 
     @Autowired
-    public RawMaterialController(DiscoveryClient discoveryClient) {
+    public CustomerController(DiscoveryClient discoveryClient) {
         this.discoveryClient = discoveryClient;
     }
 
